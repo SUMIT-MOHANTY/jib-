@@ -1,0 +1,29 @@
+[
+ {
+   "category": "Frontend",
+   "skills": [
+     { "name": "React", "level": 95 },
+     { "name": "TypeScript", "level": 90 },
+     { "name": "CSS/Sass", "level": 88 },
+     { "name": "Next.js", "level": 85 }
+   ]
+ },
+ {
+   "category": "Backend",
+   "skills": [
+     { "name": "Node.js", "level": 90 },
+     { "name": "Python", "level": 82 },
+     { "name": "PostgreSQL", "level": 80 },
+     { "name": "GraphQL", "level": 78 }
+   ]
+ },
+ {
+   "category": "DevOps",
+   "skills": [
+     { "name": "AWS", "level": 85 },
+     { "name": "Docker", "level": 88 },
+     { "name": "CI/CD", "level": 82 },
+     { "name": "Kubernetes", "level": 75 }
+   ]
+ }
+]
