@@ -1,25 +1,19 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from config import Config
 
-db = SQLAlchemy()
-
-def create_app():
+def create_app(config_class=Config):
     app = Flask(__name__)
-    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///portfolio.db"
-    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+    app.config.from_object(config_class)
     
-    db.init_app(app)
+    # Register SEO static routes
+    from flask import send_from_directory
     
-    # Register blueprints
-    from app.routes.portfolio import portfolio_bp
-    app.register_blueprint(portfolio_bp, url_prefix="/api/portfolio")
+    @app.route('/robots.txt')
+    def robots():
+        return send_from_directory('static', 'robots.txt')
     
-    # Create tables
-    with app.app_context():
-        db.create_all()
-    
-    @app.route("/")
-    def index():
-        return {"message": "Portfolio API", "status": "running"}
+    @app.route('/sitemap.xml')
+    def sitemap():
+        return send_from_directory('static', 'sitemap.xml')
     
     return app

@@ -1,23 +1,39 @@
-from flask import Flask
+from flask import Flask, jsonify, send_from_directory
 from config import Config
-from models import db
-from schemas import ma
-from routes.project_routes import project_bp
 
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
     
-    db.init_app(app)
-    ma.init_app(app)
+    # Serve static SEO files
+    @app.route('/robots.txt')
+    def robots():
+        return send_from_directory('static', 'robots.txt')
     
-    app.register_blueprint(project_bp)
+    @app.route('/sitemap.xml')
+    def sitemap():
+        return send_from_directory('static', 'sitemap.xml')
     
-    with app.app_context():
-        db.create_all()
+    # Health check endpoint with SEO
+    @app.route('/')
+    @app.route('/health')
+    def health():
+        return jsonify({
+            'status': 'healthy',
+            'service': app.config['SITE_NAME'],
+            'version': '1.0.0',
+            '_meta': {
+                'title': app.config['SITE_NAME'],
+                'description': app.config['SITE_DESCRIPTION']
+            }
+        })
+    
+    # Register blueprints (will be added when routes exist)
+    # from routes.project_routes import project_bp
+    # app.register_blueprint(project_bp, url_prefix='/api')
     
     return app
 
 if __name__ == '__main__':
     app = create_app()
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)
