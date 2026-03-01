@@ -1,0 +1,44 @@
+[
+ {
+   "id": "1",
+   "company": "TechCorp Inc.",
+   "role": "Senior Full-Stack Developer",
+   "startDate": "2021-03",
+   "endDate": null,
+   "description": "Leading development of enterprise SaaS platform serving 50K+ users.",
+   "location": "San Francisco, CA",
+   "highlights": [
+     "Architected microservices migration reducing latency by 40%",
+     "Led team of 5 developers, conducting code reviews and mentoring",
+     "Implemented CI/CD pipeline reducing deployment time by 60%"
+   ]
+ },
+ {
+   "id": "2",
+   "company": "StartupXYZ",
+   "role": "Full-Stack Developer",
+   "startDate": "2018-06",
+   "endDate": "2021-02",
+   "description": "Built MVP and scaled product from 0 to 10K users.",
+   "location": "Remote",
+   "highlights": [
+     "Developed React frontend with responsive design",
+     "Created RESTful APIs using Node.js and Express",
+     "Integrated third-party payment systems"
+   ]
+ },
+ {
+   "id": "3",
+   "company": "WebAgency Co.",
+   "role": "Frontend Developer",
+   "startDate": "2016-01",
+   "endDate": "2018-05",
+   "description": "Developed client websites and web applications.",
+   "location": "New York, NY",
+   "highlights": [
+     "Built 20+ responsive websites using modern frameworks",
+     "Collaborated with design team on UI/UX improvements",
+     "Optimized website performance achieving 90+ Lighthouse scores"
+   ]
+ }
+]

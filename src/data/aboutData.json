@@ -1,0 +1,13 @@
+{
+ "name": "Alex Chen",
+ "title": "Senior Full-Stack Developer",
+ "profileImage": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
+ "biography": "I am a passionate full-stack developer with 8+ years of experience building scalable web applications. I specialize in React, Node.js, and cloud architecture. My journey began with a fascination for creating interactive user experiences, which evolved into a career focused on building robust, performant systems. I thrive on solving complex problems and mentoring junior developers.",
+ "email": "alex.chen@email.com",
+ "location": "San Francisco, CA",
+ "socialLinks": {
+   "linkedin": "https://linkedin.com/in/alexchen",
+   "github": "https://github.com/alexchen",
+   "twitter": "https://twitter.com/alexchen"
+ }
+}

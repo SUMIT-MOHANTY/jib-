@@ -1,0 +1,27 @@
+[
+ {
+   "id": "1",
+   "institution": "University of California, Berkeley",
+   "degree": "Bachelor of Science",
+   "field": "Computer Science",
+   "startDate": "2012-08",
+   "endDate": "2016-05",
+   "gpa": "3.8/4.0",
+   "achievements": [
+     "Dean's List (2013-2016)",
+     "Best Senior Project Award"
+   ]
+ },
+ {
+   "id": "2",
+   "institution": "Coursera & Udemy",
+   "degree": "Professional Certificates",
+   "field": "Cloud Architecture & Advanced React",
+   "startDate": "2019-01",
+   "endDate": "2019-12",
+   "achievements": [
+     "AWS Solutions Architect Certified",
+     "Meta Front-End Developer Certificate"
+   ]
+ }
+]

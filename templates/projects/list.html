@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Projects{% endblock %}
+{% block content %}
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+    <h1>Projects</h1>
+    <a href="{{ url_for('projects.new') }}" class="btn btn-primary">New Project</a>
+</div>
+<div class="card">
+    {% if projects %}
+    <table>
+        <thead>
+            <tr><th>Title</th><th>Technologies</th><th>URL</th><th>Actions</th></tr>
+        </thead>
+        <tbody>
+            {% for project in projects %}
+            <tr>
+                <td>{{ project.title }}</td>
+                <td>{{ project.technologies or '-' }}</td>
+                <td>{{ project.project_url or '-' }}</td>
+                <td>
+                    <a href="{{ url_for('projects.edit', id=project.id) }}" class="btn btn-primary">Edit</a>
+                    <form method="POST" action="{{ url_for('projects.delete', id=project.id) }}" style="display: inline;">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Delete this project?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No projects yet.</p>
+    {% endif %}
+</div>
+{% endblock %}
