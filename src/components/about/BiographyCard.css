@@ -1,0 +1,75 @@
+.biography-card {
+ background: #fff;
+ border-radius: 16px;
+ padding: 2rem;
+ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.profile-section {
+ display: flex;
+ gap: 2rem;
+ margin-bottom: 1.5rem;
+ flex-wrap: wrap;
+}
+
+.profile-image {
+ width: 150px;
+ height: 150px;
+ border-radius: 50%;
+ object-fit: cover;
+ border: 4px solid #e0e0e0;
+}
+
+.profile-info {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.name {
+ font-size: 2rem;
+ font-weight: 700;
+ color: #1a1a1a;
+ margin: 0 0 0.25rem;
+}
+
+.title {
+ font-size: 1.25rem;
+ color: #666;
+ font-weight: 500;
+ margin: 0 0 0.5rem;
+}
+
+.location, .email {
+ color: #888;
+ font-size: 0.9rem;
+ margin: 0.25rem 0;
+ text-decoration: none;
+}
+
+.email:hover { color: #007bff; }
+
+.social-links {
+ margin-top: 0.75rem;
+ display: flex;
+ gap: 1rem;
+}
+
+.social-links a {
+ color: #007bff;
+ text-decoration: none;
+ font-weight: 500;
+}
+
+.social-links a:hover { text-decoration: underline; }
+
+.biography {
+ color: #444;
+ line-height: 1.7;
+ font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+ .profile-section { justify-content: center; text-align: center; }
+ .profile-info { align-items: center; }
+}

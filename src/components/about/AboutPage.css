@@ -1,0 +1,16 @@
+.about-page {
+ min-height: 100vh;
+ background: #f5f7fa;
+ padding: 2rem 1rem;
+}
+
+.container {
+ max-width: 900px;
+ margin: 0 auto;
+ display: grid;
+ gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+ .container { padding: 2rem 0; }
+}
