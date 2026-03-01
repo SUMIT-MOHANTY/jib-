@@ -1,0 +1,13 @@
+{
+  "name": "contact-form-backend",
+  "version": "1.0.0",
+  "description": "Flask REST API for contact form",
+  "main": "run.py",
+  "scripts": {
+    "start": "python run.py"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": "any"
+  }
+}
