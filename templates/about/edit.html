@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Edit About{% endblock %}
+{% block content %}
+<h1>Edit About Content</h1>
+<div class="card">
+    <form method="POST">
+        <div class="form-group">
+            <label>Content</label>
+            <textarea name="content" rows="10">{{ about.content or '' }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+{% endblock %}

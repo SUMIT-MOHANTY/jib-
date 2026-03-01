@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h1 style="margin-bottom: 1.5rem;">Dashboard</h1>
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-number">{{ stats.total_projects }}</div>
+        <div>Total Projects</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">{{ stats.total_skills }}</div>
+        <div>Total Skills</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">{{ stats.unread_messages }}</div>
+        <div>Contact Messages</div>
+    </div>
+</div>
+{% endblock %}
