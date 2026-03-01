@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}Skills{% endblock %}
+{% block content %}
+<h1 style="margin-bottom: 1rem;">Skills</h1>
+<div class="card" style="margin-bottom: 1rem;">
+    <h2>Add New Skill</h2>
+    <form method="POST" style="display: flex; gap: 1rem; align-items: flex-end;">
+        <div class="form-group" style="flex: 1; margin-bottom: 0;">
+            <label>Name</label>
+            <input type="text" name="name" required>
+        </div>
+        <div class="form-group" style="flex: 1; margin-bottom: 0;">
+            <label>Category</label>
+            <select name="category">
+                <option value="frontend">Frontend</option>
+                <option value="backend">Backend</option>
+                <option value="tools">Tools</option>
+            </select>
+        </div>
+        <div class="form-group" style="flex: 1; margin-bottom: 0;">
+            <label>Proficiency (1-100)</label>
+            <input type="number" name="proficiency" min="1" max="100" value="50">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+<div class="card">
+    {% if skills %}
+    <table>
+        <thead><tr><th>Name</th><th>Category</th><th>Proficiency</th><th>Actions</th></tr></thead>
+        <tbody>
+            {% for skill in skills %}
+            <tr>
+                <td>{{ skill.name }}</td>
+                <td>{{ skill.category }}</td>
+                <td>{{ skill.proficiency }}%</td>
+                <td>
+                    <form method="POST" action="{{ url_for('skills.delete', id=skill.id) }}" style="display: inline;">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Delete this skill?')">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No skills yet.</p>
+    {% endif %}
+</div>
+{% endblock %}
