@@ -1,0 +1,7 @@
+flask>=2.3.0
+flask-restful>=0.3.10
+flask-cors>=4.0.0
+sqlalchemy>=2.0.0
+gunicorn>=21.0
+flask-limiter>=3.0.0
+python-dotenv>=1.0.0
